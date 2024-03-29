@@ -1,0 +1,14 @@
+version: "2"
+sql:
+    - engine: "postgresql"
+      queries: "./db/query/" # Directory of SQL queries or path to single SQL file
+      schema: "./db/schema/" # Directory of SQL migrations or path to single SQL file
+      gen:
+          go:
+              package: "db"
+              out: "./db/sqlc"
+              sql_package: "pgx/v5"
+              emit_json_tags: true # If true, add JSON tags to generated structs
+              emit_prepared_queries: false # If true, include support for prepared queries
+              emit_interface: false # If true, output a Querier interface in the generated package
+              emit_exact_table_names: false # If true, structs names will mirror table names. Otherwise, sqlc attempts to singularize plural table names.
