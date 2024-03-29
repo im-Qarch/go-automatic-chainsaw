@@ -7,7 +7,7 @@ sql:
           go:
               package: "db"
               out: "./db/sqlc"
-              sql_package: "pgx/v5"
+              sql_package: "database/sql"
               emit_json_tags: true # If true, add JSON tags to generated structs
               emit_prepared_queries: false # If true, include support for prepared queries
               emit_interface: false # If true, output a Querier interface in the generated package
