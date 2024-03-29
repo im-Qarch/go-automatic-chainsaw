@@ -85,3 +85,17 @@ after run you can check success coverage code by highlights
 <p align='start'>
 <img src='./research_and_development_work/TEST_SAMPLE_RES.png' width='800'/>
 </p>
+
+<br />
+
+### ⚙️ 5. **_init CI/CD github Actions_**
+
+-   to init git hub actions fot `GO` see [the doc](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-go)
+-   then you need to setup `postgres` in your ci config [see doc](https://docs.github.com/en/actions/using-containerized-services/creating-postgresql-service-containers)
+-   then you need to setup `migration` in your ci config [see doc](https://github.com/golang-migrate/migrate/tree/master/cmd/migrate)
+
+<p align='start'>
+<img src='./research_and_development_work/CI_OVERVIEW.png' width='800'/>
+</p>
+
+final config should look like [this](./.github/workflows/ci-test.yml)
