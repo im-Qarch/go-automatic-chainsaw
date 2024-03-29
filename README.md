@@ -88,7 +88,7 @@ after run you can check success coverage code by highlights
 
 <br />
 
-### ⚙️ 5. **_init CI/CD github Actions_**
+### 👨‍💻 5. **_init CI/CD github Actions_**
 
 -   to init git hub actions fot `GO` see [the doc](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-go)
 -   then you need to setup `postgres` in your ci config [see doc](https://docs.github.com/en/actions/using-containerized-services/creating-postgresql-service-containers)
@@ -98,4 +98,28 @@ after run you can check success coverage code by highlights
 <img src='./research_and_development_work/CI_OVERVIEW.png' width='800'/>
 </p>
 
-final config should look like [this](./.github/workflows/ci-test.yml)
+final config should look like [this](./.github/workflows/ci.yml)
+
+<br />
+
+### 🍸 6. **_Implement RESTful HTTP API using [Gin](https://gin-gonic.com/docs/quickstart/)_**
+
+-   after install gin :
+    -   create api folder and [server.go](./api/server.go) file for base service configuration
+    -   create main.go [main.go](./main.go) file in root to init go for db,server
+    -   after `make server` you can use [Thunder Client](https://www.thunderclient.com/) or [postman](https://www.postman.com/) to check and test api
+
+<br />
+
+### ⚙️ 7. **_Extra Configurations_**
+
+-   install [viper](https://github.com/spf13/viper) as a configuration file solution.
+
+    ```shell
+    go get github.com/spf13/viper
+    ```
+
+    then create [app.env](./app.env) file to define configs.
+    and [config.go](./utils/config.go) file to load configs in app
+
+<br />
