@@ -10,6 +10,6 @@ sql:
               sql_package: "database/sql"
               emit_json_tags: true # If true, add JSON tags to generated structs
               emit_prepared_queries: false # If true, include support for prepared queries
-              emit_interface: false # If true, output a Querier interface in the generated package
+              emit_interface: true # If true, output a Querier interface in the generated package
               emit_exact_table_names: false # If true, structs names will mirror table names. Otherwise, sqlc attempts to singularize plural table names.
               emit_empty_slices: true # If true, structs names will mirror table names. Otherwise, sqlc attempts to singularize plural table names.

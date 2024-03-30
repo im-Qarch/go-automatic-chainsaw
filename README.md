@@ -102,12 +102,22 @@ final config should look like [this](./.github/workflows/ci.yml)
 
 <br />
 
-### 🍸 6. **_Implement RESTful HTTP API using [Gin](https://gin-gonic.com/docs/quickstart/)_**
+### 🍸 6. **_Implement RESTful HTTP API using [Gin](https://gin-gonic.com/docs/quickstart/) and Mock DB for testing HTTP API using [Gomock](https://github.com/uber-go/mock)_**
 
 -   after install gin :
+
     -   create api folder and [server.go](./api/server.go) file for base service configuration
     -   create main.go [main.go](./main.go) file in root to init go for db,server
     -   after `make server` you can use [Thunder Client](https://www.thunderclient.com/) or [postman](https://www.postman.com/) to check and test api
+
+-   after install gomock :
+    -   check installed is correctly by ` mockgen -version`
+    -   make Store as interface and make `Querier` by set `emit_interface: true` in [sqlc](./sqlc.yaml)
+    -   create [mock](./db/mock) folder in db dir and :
+        ```shell
+        make mock #path project go package / path store (db/sqlc)
+        ```
+        check [store.go](./db/mock/store.go)
 
 <br />
 

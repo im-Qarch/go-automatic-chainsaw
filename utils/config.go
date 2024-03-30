@@ -10,6 +10,7 @@ type Config struct {
 	DBDriver      string `mapstructure:"DB_DRIVER"`
 	DBSource      string `mapstructure:"DB_SOURCE"`
 	ServerAddress string `mapstructure:"SERVER_ADDRESS"`
+	GinTestMode   string `mapstructure:"GIN_TEST_MODE"`
 }
 
 // LoadConfig reads configuration from file or environment variables.
