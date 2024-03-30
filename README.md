@@ -1,4 +1,4 @@
-# go-automatic-chainsaw -> bank-app
+# go-automatic-chainsaw -> bank-app [WIP]
 
 ## Roadmap
 
