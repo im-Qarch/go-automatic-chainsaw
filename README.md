@@ -123,7 +123,7 @@ final config should look like [this](./.github/workflows/ci.yml)
 
 ### ⚙️ 7. **_Extra Configurations_**
 
--   install [viper](https://github.com/spf13/viper) as a configuration file solution.
+-   🔰 install [viper](https://github.com/spf13/viper) as a configuration file solution.
 
     ```shell
     go get github.com/spf13/viper
@@ -132,4 +132,18 @@ final config should look like [this](./.github/workflows/ci.yml)
     then create [app.env](./app.env) file to define configs.
     and [config.go](./utils/config.go) file to load configs in app
 
-<br />
+    <br />
+
+-   🔰 install [paseto](https://paseto.io/) as a Platform-Agnostic Security Tokens.
+    also you can use JWT, but after some research we decide to use paseto
+
+    ```shell
+    go get -u github.com/o1egl/paseto
+    ```
+
+    then create [maker](./token/maker.go) file to define base auth-token flow.
+    and [paseto_maker](./token/paseto_maker.go) file to define paseto configs.
+
+    **🟨 Initial [auth-middleware](./api/middleware.go) to handle user access to apis just by right token**
+
+    <br />
