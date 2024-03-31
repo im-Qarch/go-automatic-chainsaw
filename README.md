@@ -144,4 +144,6 @@ final config should look like [this](./.github/workflows/ci.yml)
     then create [maker](./token/maker.go) file to define base auth-token flow.
     and [paseto_maker](./token/paseto_maker.go) file to define paseto configs.
 
-<br />
+    **🟨 Initial [auth-middleware](./api/middleware.go) to handle user access to apis just by right token**
+
+    <br />
