@@ -147,3 +147,23 @@ final config should look like [this](./.github/workflows/ci.yml)
     **🟨 Initial [auth-middleware](./api/middleware.go) to handle user access to apis just by right token**
 
     <br />
+
+### 🐳 8. **_Dockerize app for release and [Build a minimal Golang Docker image with a multistage Dockerfile]_**
+
+-   first create [Dockerfile](./Dockerfile) in root dir
+    then go to docker-hub to find-out [golang official image](https://hub.docker.com/_/golang) for docker
+    write basic config for build your go app and run :
+
+    ```shell
+    docker build -t go-automatic-chainsaw:latest . #tag with name of app and base path
+    ```
+
+    so let's make it ease with docker-compose
+
+    -   create [docker compose file](./docker-compose.yml) based on [doc](https://docs.docker.com/compose/gettingstarted/)
+
+    ```shell
+    docker compose up
+    ```
+
+    <br />
