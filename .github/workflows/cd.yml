@@ -35,7 +35,6 @@ jobs:
             - name: Load secrets and save to app.env
               run: |
                   echo $APP_ENV | base64 --decode > app.env
-                  echo $APP_ENV | base64 --decode > /app/app.env
 
             - name: Extract metadata (tags, labels) for Docker
               id: meta
