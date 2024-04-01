@@ -36,8 +36,8 @@ jobs:
 
             - name: Load secrets and save to app.env
               run: |
-              $APP_ENV | jq -r > app.env
-              cat ./app.env
+                  $APP_ENV | jq -r > app.env
+                  cat ./app.env
 
             - name: Extract metadata (tags, labels) for Docker
               id: meta
