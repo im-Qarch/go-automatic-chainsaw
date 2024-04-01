@@ -4,6 +4,10 @@
 name: cd-flow
 
 on:
+    workflow_run:
+        workflows: ["ci"]
+        types:
+            - completed
     push:
         branches: ["dev"]
 
