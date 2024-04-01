@@ -2,8 +2,8 @@
 
 set -e
 
-echo "start the app"
-source /app.env
+echo "readable env"
 source /app/app.env
 
+echo "start the app"
 exec "$@"

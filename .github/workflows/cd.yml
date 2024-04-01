@@ -33,8 +33,11 @@ jobs:
                   password: ${{ secrets.GIT_PERSONAL_ACCESS_TOKEN }}
 
             - name: Load secrets and save to app.env
+              env:
+                  APP_ENV_FILE: ${{ secrets.APP_ENV }}
               run: |
-                  echo $APP_ENV | base64 --decode > app.env
+                  echo $APP_ENV_FILE | base64 --decode > app.env
+                  source app.env
 
             - name: Extract metadata (tags, labels) for Docker
               id: meta
