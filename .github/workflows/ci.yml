@@ -20,9 +20,9 @@ jobs:
                 image: postgres:latest
                 # Provide the password for postgres
                 env:
-                    POSTGRES_DB: bank_db
-                    POSTGRES_USER: root
-                    POSTGRES_PASSWORD: root
+                    POSTGRES_DB: ${{ github.POSTGRES_DB }}
+                    POSTGRES_USER: ${{ github.POSTGRES_USER }}
+                    POSTGRES_PASSWORD: ${{ github.POSTGRES_PASSWORD }}
                 ports:
                     - 5432:5432
                 # Set health checks to wait until postgres has started
